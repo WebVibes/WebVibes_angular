@@ -1,0 +1,16 @@
+.footer {
+  background: #424242;
+  padding-bottom: 2vw;
+  padding-top: 2vw;
+  color: white;
+}
+.footer-logo {
+  max-height: 100px;
+  padding: 20px;
+}
+
+.footer-center {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}

@@ -1,1 +1,114 @@
-<p>contact-form works!</p>
+<div class="container example-form">
+  <h1>Készen állsz a közös munkára?</h1>
+  <p>
+    Írj nekünk az alábbi adatok kitöltésével és hamarosan felvesszük veled a
+    kapcsolatot
+  </p>
+  <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Név</mat-label>
+      <input matInput formControlName="name" required />
+      <mat-error *ngIf="myform.controls['name'].invalid">{{
+        getNameErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required />
+      <mat-error *ngIf="myform.controls['email'].invalid">{{
+        getEmailErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Miben segíthetünk?</mat-label>
+      <mat-select formControlName="services" multiple required>
+        <mat-option *ngFor="let service of servicesList" [value]="service">{{
+          service
+        }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myform.controls['services'].invalid">{{
+        getServicesErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Üzenj nekünk</mat-label>
+      <textarea
+        formControlName="message"
+        matInput
+        placeholder="Ex. It makes me feel..."
+      ></textarea>
+    </mat-form-field>
+
+    <div class="checkbox-container">
+      <mat-checkbox class="text-wrap" [(ngModel)]="checked"
+        >Elfogadom az Adatkezelési Tájékoztatóban foglaltakat.</mat-checkbox
+      >
+    </div>
+
+    <button
+      mat-flat-button
+      type="submit"
+      aria-label="Example icon-button with menu icon"
+      style="background-color: #3f51b5; color: white"
+    >
+      Küldés
+    </button>
+
+    <!-- <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="model.name"
+          name="name"
+          #name="ngModel"
+        />
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input
+          type="text"
+          class="form-control"
+          id="alterEgo"
+          [(ngModel)]="model.alterEgo"
+          name="alterEgo"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="power">Hero Power</label>
+        <select
+          class="form-control"
+          id="power"
+          required
+          [(ngModel)]="model.power"
+          name="power"
+          #power="ngModel"
+        >
+          <option *ngFor="let work of worksList" [value]="work">
+            {{ work }}
+          </option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+          Power is required
+        </div>
+      </div>
+  
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!heroForm.form.valid"
+      >
+        Submit
+      </button> -->
+  </form>
+</div>
