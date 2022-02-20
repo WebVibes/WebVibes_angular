@@ -45,3 +45,13 @@ mat-sidenav {
   padding-top: 1rem;
   cursor: pointer;
 }
+
+.hamburger-icon {
+  display: None;
+}
+
+@media screen and (max-width: 600px) {
+  .hamburger-icon {
+    display: block;
+  }
+}
