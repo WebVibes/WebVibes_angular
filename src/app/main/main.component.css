@@ -26,35 +26,42 @@
 }
 
 .box {
-  align-items: left;
-  background: #fff;
-  border-radius: 0.5rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  padding: 2rem;
   border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
   background: linear-gradient(#1e2226, #444444);
   color: white;
-  height: calc(100% - 3rem);
+  margin: 0.5rem;
+  padding: 2rem;
+  height: calc(100% - 2rem);
+}
+
+mat-card-header {
+  margin-bottom: 1rem;
 }
 
 .box-header {
   display: flex;
-  margin: 0 0 16px 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 12px 0;
+}
+
+.box-header-icon-container {
+  height: 60px;
+  width: 60px;
 }
 
 .box-header-icon {
   height: 50px;
   width: 50px;
-  margin-right: 16px;
+  border-radius: 0;
+  margin-right: 12px;
 }
 
 .box-header-text {
-  width: 100%;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  /* margin: auto; */
 }
 
 #portfolio {
@@ -76,6 +83,21 @@
   padding-bottom: 2vw;
   padding-top: 2vw;
   background: linear-gradient(#e5e5fe, #dffaff);
+}
+
+.goal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.our-goal {
+  padding: 24px;
+  margin: auto;
+}
+
+.our-goal p {
+  margin: 24px 0;
 }
 
 .hullam {
