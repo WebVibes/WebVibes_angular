@@ -1,0 +1,43 @@
+.box {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  background: linear-gradient(#1e2226, #444444);
+  color: white;
+  margin: 0.5rem;
+  padding: 2rem;
+  height: calc(100% - 2rem);
+}
+
+mat-card-header {
+  margin-bottom: 1rem;
+}
+
+mat-list-item mat-icon,
+mat-list-item div {
+  color: white;
+}
+
+.box-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 12px 0;
+}
+
+.box-header-icon-container {
+  height: 60px;
+  width: 60px;
+}
+
+.box-header-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 0;
+  margin-right: 12px;
+}
+
+.box-header-text {
+  display: flex;
+  align-items: center;
+  /* margin: auto; */
+}

@@ -1,0 +1,22 @@
+<section id="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 hero-text-container">
+        <h1>{{ mainText }}</h1>
+        <p>{{ secondaryText }}</p>
+        <button
+          mat-flat-button
+          aria-label="Example icon-button with menu icon"
+          routerLink="/contact"
+          routerLinkActive="active"
+          color="accent"
+        >
+          Csináljuk
+        </button>
+      </div>
+      <div class="col-lg-6">
+        <img class="hero-image" src="{{ imageSrc }}" alt="" />
+      </div>
+    </div>
+  </div>
+</section>

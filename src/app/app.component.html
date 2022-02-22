@@ -21,9 +21,15 @@
       Szolgáltatásaink
     </button>
     <mat-menu #settingsMenu>
-      <menu mat-menu-item>Logó- és arculattervezés</menu>
-      <menu mat-menu-item>Egyedi weboldal</menu>
-      <menu mat-menu-item>Webshop készítés</menu>
+      <menu mat-menu-item routerLink="/logo" routerLinkActive="active"
+        >Logó- és arculattervezés</menu
+      >
+      <menu mat-menu-item routerLink="/website" routerLinkActive="active"
+        >Egyedi weboldal</menu
+      >
+      <menu mat-menu-item routerLink="/webshop" routerLinkActive="active"
+        >Webshop készítés</menu
+      >
     </mat-menu>
 
     <button

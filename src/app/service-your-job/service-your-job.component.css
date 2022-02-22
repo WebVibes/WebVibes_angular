@@ -1,0 +1,22 @@
+#hero {
+  padding-bottom: 2vw;
+  padding-top: 2vw;
+  position: relative;
+  background: linear-gradient(#e5e5fe, #dffaff);
+}
+
+.hero-text-container {
+  height: 100%;
+  padding: 24px;
+  margin: auto;
+}
+
+.hero-image {
+  width: 100%;
+  padding: 12px 0 12px 0;
+}
+
+#services {
+  padding-bottom: 2vw;
+  padding-top: 2vw;
+}

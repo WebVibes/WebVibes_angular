@@ -1,0 +1,35 @@
+<app-hero
+  [mainText]="heroMainText"
+  [secondaryText]="heroSecondaryText"
+  [imageSrc]="heroImageSrc"
+>
+</app-hero>
+<section id="progress">
+  <div class="container">
+    <div class="section-text">
+      <h1>Mik a lépések?</h1>
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let item of progressCardsContent"
+        class="col-lg-4 col-md-6 col-sm-12"
+      >
+        <app-card
+          [title]="item.title"
+          [content]="item.content"
+          [iconSrc]="item.imageSrc"
+        >
+        </app-card>
+      </div>
+    </div>
+  </div>
+</section>
+<app-service-your-job
+  [yourJobText]="yourJobText"
+  [priceText]="priceText"
+  [descriptionText]="descriptionText"
+  [imageSrc]="yourJobImageSrc"
+>
+</app-service-your-job>
+<app-contact> </app-contact>
+<app-footer></app-footer>

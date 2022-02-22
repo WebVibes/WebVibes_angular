@@ -1,0 +1,27 @@
+<mat-card class="box mat-elevation-z15">
+  <mat-card-header *ngIf="iconSrc || title">
+    <img
+      *ngIf="iconSrc"
+      mat-card-avatar
+      class="box-header-icon"
+      src="{{ iconSrc }}"
+      alt="My SVG"
+    />
+    <mat-card-title *ngIf="title" class="box-header-text">{{
+      title
+    }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="!isArrayContent(content)">
+    <p>
+      {{ content }}
+    </p>
+  </mat-card-content>
+  <mat-card-content *ngIf="isArrayContent(content)">
+    <mat-list>
+      <mat-list-item *ngFor="let element of content">
+        <mat-icon mat-list-icon>check_circle_outline</mat-icon>
+        <div mat-line>{{ element }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

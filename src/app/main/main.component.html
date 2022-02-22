@@ -1,34 +1,9 @@
-<section id="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 hero-text-container">
-        <h1>Legyen kreatív, működő weboldalad neked is!</h1>
-        <p>
-          A közös munka során egyedi és célirányos megoldásokkal megmutatjuk
-          ügyfeleidnek miért <span>Te</span> vagy a legjobb!
-        </p>
-        <button
-          mat-flat-button
-          aria-label="Example icon-button with menu icon"
-          routerLink="/contact"
-          routerLinkActive="active"
-          color="accent"
-        >
-          Csináljuk
-        </button>
-      </div>
-      <div class="col-lg-6">
-        <img
-          class="hero-image"
-          src="./assets/illusztraciok/fooldalbanner.svg"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-  <!-- <img src="./assets/hullamok.svg" alt="" class="hullam" />
-    <img src="./assets/kor.svg" alt="" class="kor" /> -->
-</section>
+<app-hero
+  [mainText]="heroMainText"
+  [secondaryText]="heroSecondaryText"
+  [imageSrc]="heroImageSrc"
+>
+</app-hero>
 
 <section id="services">
   <div class="container">
@@ -43,94 +18,16 @@
       </div>
       <div class="col-lg-8 col-md-12 order-lg-1 order-lg-1">
         <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <mat-card class="box mat-elevation-z15">
-              <mat-card-header>
-                <img
-                  mat-card-avatar
-                  class="box-header-icon"
-                  src="assets/ikonok/logo-arculattervezes-ikon.svg"
-                  alt="My SVG"
-                />
-                <mat-card-title class="box-header-text"
-                  >Logó- és arculat tervezés</mat-card-title
-                >
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  A branding és a pontosan megtervezett vizuális megjelenés a
-                  siker egyik alapköve. Egy jól megtervezett arculat növeli a
-                  láthatóságot, bizalmat kelt, segíti az értékesítést.
-                </p>
-              </mat-card-content>
-            </mat-card>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <mat-card class="box mat-elevation-z15">
-              <mat-card-header class="box-header">
-                <img
-                  mat-card-avatar
-                  class="box-header-icon"
-                  src="assets/ikonok/webdesign-ikon.svg"
-                  alt="My SVG"
-                />
-                <mat-card-title class="box-header-text"
-                  >Webdesign</mat-card-title
-                >
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  A közös munka során egyedi grafikákkal, bannerekkel tesszük
-                  teljesen egyedivé a webáruházad, és használatba vétel után is
-                  rendelkezésedre állunk karbantartási, üzemeltetési és további
-                  grafikai munkára.
-                </p>
-              </mat-card-content>
-            </mat-card>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <mat-card class="box mat-elevation-z15">
-              <mat-card-header class="box-header">
-                <img
-                  mat-card-avatar
-                  class="box-header-icon"
-                  src="assets/ikonok/webfejlesztes-ikon.svg"
-                  alt="My SVG"
-                />
-                <mat-card-title class="box-header-text"
-                  >Webfejlesztés</mat-card-title
-                >
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  A digitális arculat legfontosabb eszköze a weboldal. Segítünk,
-                  hogy kitűnj a tömegből és weboldalad egyszerre felelen meg
-                  marketing és kommunikációs céloknak is.
-                </p>
-              </mat-card-content>
-            </mat-card>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <mat-card class="box mat-elevation-z15">
-              <mat-card-header class="box-header">
-                <img
-                  mat-card-avatar
-                  class="box-header-icon"
-                  src="assets/ikonok/webshop-ikon.svg"
-                  alt="My SVG"
-                />
-                <mat-card-title class="box-header-text"
-                  >Webshop készítés</mat-card-title
-                >
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  A digitális arculat legfontosabb eszköze a weboldal. Segítünk,
-                  hogy kitűnj a tömegből és weboldalad egyszerre felelen meg
-                  marketing és kommunikációs céloknak is.
-                </p>
-              </mat-card-content>
-            </mat-card>
+          <div
+            *ngFor="let item of servicesCardsContent"
+            class="col-md-6 col-sm-12"
+          >
+            <app-card
+              [title]="item.title"
+              [content]="item.content"
+              [iconSrc]="item.imageSrc"
+            >
+            </app-card>
           </div>
         </div>
       </div>
@@ -186,70 +83,16 @@
       <h1>Mik a lépések?</h1>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <mat-card class="box mat-elevation-z15">
-          <mat-card-header class="box-header">
-            <img
-              mat-card-avatar
-              class="box-header-icon"
-              src="assets/ikonok/igenyfelmeres-ikon.svg"
-              alt="My SVG"
-            />
-            <mat-card-title class="box-header-text"
-              >Igény felmérés</mat-card-title
-            >
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              Online meeting során felmérjük a vállalkozásod múltját, jelenét és
-              vízióját, felderítjük az értékeidet, célközönségedet,
-              versenytársaidat. Ez lesz a tervezési folyamat alapja.
-            </p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <mat-card class="box mat-elevation-z15">
-          <mat-card-header class="box-header">
-            <img
-              mat-card-avatar
-              class="box-header-icon"
-              src="assets/ikonok/tervek-elkeszitese-ikon.svg"
-              alt="My SVG"
-            />
-            <mat-card-title class="box-header-text"
-              >Tervek elkészítése</mat-card-title
-            >
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              Látványtervek segítségével bemutatjuk a fő grafikai irányt, amit
-              az igényeid szerint módosítunk, hogy a végeredménnyel teljesen
-              azonosulni tudj.
-            </p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <mat-card class="box mat-elevation-z15">
-          <mat-card-header class="box-header">
-            <img
-              mat-card-avatar
-              class="box-header-icon"
-              src="assets/ikonok/megvalositas-ikon.svg"
-              alt="My SVG"
-            />
-            <mat-card-title class="box-header-text"
-              >Megvalósítás</mat-card-title
-            >
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              Az átbeszélt módosítások után kidolgozzuk a végleges terveket,
-              amik alapján fejlesztünk majd tesztelünk.
-            </p>
-          </mat-card-content>
-        </mat-card>
+      <div
+        *ngFor="let item of progressCardsContent"
+        class="col-lg-4 col-md-6 col-sm-12"
+      >
+        <app-card
+          [title]="item.title"
+          [content]="item.content"
+          [iconSrc]="item.imageSrc"
+        >
+        </app-card>
       </div>
     </div>
   </div>
@@ -326,20 +169,5 @@
     </div>
   </div>
 </section>
-<section id="progress">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <app-contact-form></app-contact-form>
-      </div>
-      <div class="col-lg-6">
-        <img
-          class="hero-image"
-          src="./assets/illusztraciok/kapcsolat.svg"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-</section>
+<app-contact> </app-contact>
 <app-footer></app-footer>
