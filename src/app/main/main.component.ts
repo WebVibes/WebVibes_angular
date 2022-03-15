@@ -10,7 +10,9 @@ export class MainComponent implements OnInit {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
 
-  heroMainText = 'Legyen kreatív, működő weboldalad neked is!'
+  heroMainText = `
+    Legyen kreatív, működő weboldalad neked is!
+    `
   heroSecondaryText = `
     A közös munka során egyedi és célirányos megoldásokkal megmutatjuk ügyfeleidnek miért Te vagy a legjobb!
     ` // NOTE span TE

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Hind Siliguri", sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+@import "~@angular/material/theming";
+$custom-typography: mat-typography-config(
+  $font-family: "Hind Siliguri",
+);
+
+@include angular-material-typography($custom-typography);
+
+mat-checkbox.text-wrap {
+  label.mat-checkbox-layout {
+    white-space: normal;
+  }
+}

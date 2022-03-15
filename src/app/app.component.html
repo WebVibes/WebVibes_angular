@@ -1,6 +1,7 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="example-toolbar" color="primary">
     <button
+      class="button"
       mat-button
       aria-label="Example icon-button with menu icon"
       routerLink=""
@@ -13,6 +14,7 @@
       Web Vibes
     </button>
     <button
+      class="button"
       *ngIf="!mobileQuery.matches"
       mat-button
       aria-label="Example icon-button with menu icon"
@@ -33,6 +35,7 @@
     </mat-menu>
 
     <button
+      class="button"
       *ngIf="!mobileQuery.matches"
       mat-button
       aria-label="Example icon-button with menu icon"
@@ -42,6 +45,7 @@
       Munkáink
     </button>
     <button
+      class="button"
       *ngIf="!mobileQuery.matches"
       mat-button
       aria-label="Example icon-button with menu icon"
@@ -52,6 +56,7 @@
     </button>
     <span class="example-spacer"></span>
     <button
+      class="button"
       *ngIf="!mobileQuery.matches"
       mat-flat-button
       aria-label="Example icon-button with menu icon"

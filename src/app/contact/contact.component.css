@@ -1,8 +1,19 @@
-#progress {
-  padding-bottom: 2vw;
-  padding-top: 2vw;
+.section {
+  padding: 96px 0;
 }
+
 .hero-image {
   width: 100%;
   padding: 12px 0 12px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-image {
+    width: 100%;
+    padding: 48px 0;
+  }
+  .form-container {
+    width: 100%;
+    padding-bottom: 48px;
+  }
 }

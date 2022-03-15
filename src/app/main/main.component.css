@@ -1,25 +1,20 @@
+.section {
+  padding: 96px 0;
+}
+
 .services-text {
   margin: auto;
 }
 
 #portfolio {
   background: linear-gradient(#e5e5fe, #dffaff);
-  padding-bottom: 2vw;
-  padding-top: 2vw;
 }
 
 .section-text {
   margin: 1.5rem;
 }
 
-#progress {
-  padding-bottom: 2vw;
-  padding-top: 2vw;
-}
-
 #contact {
-  padding-bottom: 2vw;
-  padding-top: 2vw;
   background: linear-gradient(#e5e5fe, #dffaff);
 }
 
@@ -113,12 +108,24 @@
 .box-header-text {
   display: flex;
   align-items: center;
+  font-size: 16px;
   /* margin: auto; */
 }
 
 .hero-image {
   width: 100%;
-  padding: 12px 0 12px 0;
+  padding-left: 80px;
+}
+
+.main-text {
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.secondary-text {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -127,6 +134,9 @@
   }
   .hero-image {
     padding: 24px;
+  }
+  .section {
+    padding: 24px 0;
   }
 }
 

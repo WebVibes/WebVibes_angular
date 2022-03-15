@@ -5,40 +5,36 @@
 >
 </app-hero>
 
-<section id="services">
+<section id="services" class="section">
   <div class="container">
+    <div class="section-text">
+      <h1 class="main-text">Ide kell egy cim</h1>
+      <p class="secondary-text">
+        A digitális arculat legfontosabb eszköze a weboldal. Segítünk, hogy
+        kitűnj a tömegből és weboldalad egyszerre felelen meg marketing és
+        kommunikációs céloknak is.
+      </p>
+    </div>
     <div class="row">
-      <div class="col-lg-4 col-md-12 order-lg-2 services-text">
-        <h1>Ide kell egy cim</h1>
-        <p>
-          A digitális arculat legfontosabb eszköze a weboldal. Segítünk, hogy
-          kitűnj a tömegből és weboldalad egyszerre felelen meg marketing és
-          kommunikációs céloknak is.
-        </p>
-      </div>
-      <div class="col-lg-8 col-md-12 order-lg-1 order-lg-1">
-        <div class="row">
-          <div
-            *ngFor="let item of servicesCardsContent"
-            class="col-md-6 col-sm-12"
-          >
-            <app-card
-              [title]="item.title"
-              [content]="item.content"
-              [iconSrc]="item.imageSrc"
-            >
-            </app-card>
-          </div>
-        </div>
+      <div
+        *ngFor="let item of servicesCardsContent"
+        class="col-xl-3 col-md-6 col-sm-12"
+      >
+        <app-card
+          [title]="item.title"
+          [content]="item.content"
+          [iconSrc]="item.imageSrc"
+        >
+        </app-card>
       </div>
     </div>
   </div>
 </section>
 
-<section id="portfolio">
+<section id="portfolio" class="section">
   <div *ngIf="!mobileQuery.matches" class="container">
     <div class="section-text">
-      <h1>Ezeket készítettük eddig</h1>
+      <h1 class="main-text">Ezeket készítettük eddig</h1>
     </div>
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12">
@@ -64,7 +60,7 @@
   </div>
   <div *ngIf="mobileQuery.matches" class="container">
     <div class="section-text">
-      <h1>Ezeket készítettük eddig</h1>
+      <h1 class="main-text">Ezeket készítettük eddig</h1>
     </div>
   </div>
   <div *ngIf="mobileQuery.matches" class="scrolling-wrapper-flexbox">
@@ -77,10 +73,10 @@
   </div>
 </section>
 
-<section id="progress">
+<section id="progress" class="section">
   <div class="container">
     <div class="section-text">
-      <h1>Mik a lépések?</h1>
+      <h1 class="main-text">Mik a lépések?</h1>
     </div>
     <div class="row">
       <div
@@ -98,13 +94,13 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="section">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 goal-container">
         <div class="our-goal">
-          <h1>Célunk</h1>
-          <p>
+          <h1 class="main-text">Célunk</h1>
+          <p class="secondary-text">
             A hatékonyság erdekében komplex és kreatív megoldásokban
             gondolkodunk a vizuális irányvonal kialakításában, folyamatosan
             keressük a lehetőségeket és a változatosságot. Weboldalaink
@@ -163,7 +159,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6" style="margin: auto">
         <img class="hero-image" src="./assets/img/monitor.png" alt="" />
       </div>
     </div>

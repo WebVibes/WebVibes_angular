@@ -1,14 +1,16 @@
 #hero {
-  padding-bottom: 2vw;
-  padding-top: 2vw;
+  padding: 4vw 0;
   position: relative;
   background: linear-gradient(#e5e5fe, #dffaff);
 }
 
 .hero-text-container {
-  height: 100%;
-  padding: 24px;
+  padding: 24px 80px 24px 0;
   margin: auto;
+}
+
+.hero-image-container {
+  padding-left: 80px;
 }
 
 .hero-image {
@@ -19,4 +21,31 @@
 #services {
   padding-bottom: 2vw;
   padding-top: 2vw;
+}
+
+.main-text {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.secondary-text {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-text {
+    font-size: 28px;
+  }
+  .secondary-text {
+    font-size: 18px;
+  }
+  .hero-text-container {
+    padding: 24px 12px;
+    margin: auto;
+  }
+  .hero-image-container {
+    padding: 20px;
+  }
 }
